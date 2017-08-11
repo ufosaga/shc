@@ -31,7 +31,7 @@ shc: shc.c
 	$(CC) $(CFLAGS) $@.c -o $@
 
 ask_for_test:
-	@echo '***	¿Do you want to probe shc with a test script?'
+	@echo '***	Do you want to probe shc with a test script?'
 	@echo '***	Please try...	make test'
 
 test: make_the_test ask_for_strings
@@ -46,7 +46,7 @@ match.x: shc match
 	CFLAGS="$(CFLAGS)" ./shc $(SHCFLAGS) -f match
 
 ask_for_strings:
-	@echo '***	¿Do you want to see strings in the generated binary?'
+	@echo '***	Do you want to see strings in the generated binary?'
 	@echo '***	Please try...	make strings'
 
 strings: make_the_strings ask_for_expiration
@@ -57,7 +57,7 @@ make_the_strings: match.x
 	strings -n 5 match.x
 
 ask_for_expiration:
-	@echo '***	¿Do you want to probe expiration date?'
+	@echo '***	Do you want to probe expiration date?'
 	@echo '***	Please try...	make expiration'
 
 expiration: til_yesterday ask_for_install
