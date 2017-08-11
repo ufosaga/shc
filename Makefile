@@ -75,7 +75,7 @@ ask_for_install:
 
 install: shc
 	@echo '***	Installing shc and shc.1 on '$(INSTALL_PATH)
-	@echo -n '***	¿Do you want to continue? '; read ANS; case "$$ANS" in y|Y|yes|Yes|YES) ;; *) exit 1;; esac;
+	@echo -n '***	Do you want to continue? '; read ANS; case "$$ANS" in y|Y|yes|Yes|YES) ;; *) exit 1;; esac;
 	install -c -s shc $(INSTALL_PATH)/bin/
 	install -c -m 644 shc.1 $(INSTALL_PATH)/man/man1/
 
